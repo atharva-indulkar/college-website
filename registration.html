@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <title>Admission</title>
+         <style>
+            .error-message {
+    font-size: 0.9em;
+    margin-top: 0.25rem;
+}
+         </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="/Images/college-logo.jpg" alt="logo" height="50px" width="50px" class="rounded" />
+            ACE
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="registration.html">Admission</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Programs
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="about departments.html">Department Intake</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"></li>
+          <a class="nav-link" href="alumni.html">Alumnis</a>
+          </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <!-- <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+          </div>
+        </div>
+      </nav>
+
+    <div class="container m-5"></div>
+    <form class="row g-3 ms-3" id="registration-form">
+        <div class="col-md-6">
+            <label for="username" class="form-label">Name</label>
+            <input type="text" id="username" name="username" class="form-control" required>
+        </div>
+    
+        <div class="col-md-6">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" id="age" name="age" class="form-control" required min="1">
+        </div>
+    
+        <div class="col-md-6">
+            <label for="dob" class="form-label">Date of Birth</label>
+            <input type="date" id="dob" name="dob" class="form-control" required>
+        </div>
+    
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+    
+        <div class="col-md-6">
+            <label for="phone-number" class="form-label">Phone Number</label>
+            <input type="tel" id="phone-number" name="phone" class="form-control" required>
+        </div>
+    
+        <div class="col-md-6">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" name="password" class="form-control" minlength="8" required>
+        </div>
+    
+        <div class="col-md-6">
+            <label class="form-label">Gender</label><br>
+            <div class="form-check">
+                <input type="radio" id="male" name="gender" value="male" class="form-check-input" required>
+                <label for="male" class="form-check-label">Male</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="female" name="gender" value="female" class="form-check-input" required>
+                <label for="female" class="form-check-label">Female</label>
+            </div>
+        </div>
+    
+        <div class="col-md-6">
+            <label class="form-label">Department Choice</label><br>
+            <div class="form-check">
+                <input type="radio" id="CE" name="department-choice" value="Computer Engineering" class="form-check-input" required>
+                <label for="CE" class="form-check-label">Computer Engineering</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="IT" name="department-choice" value="Information Technology" class="form-check-input" required>
+                <label for="IT" class="form-check-label">Information Technology</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="AIDS" name="department-choice" value="Artificial Intelligence and Data Science" class="form-check-input" required>
+                <label for="AIDS" class="form-check-label">Artificial Intelligence and Data Science</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="ECS" name="department-choice" value="Electronics and Computer Science" class="form-check-input" required>
+                <label for="ECS" class="form-check-label">Electronics and Computer Science</label>
+            </div>
+        </div>
+    
+        <div class="col-md-6">
+            <label for="university-status" class="form-label">University Status</label>
+            <select name="university-status" id="university-status" class="form-select" required>
+                <option value="">--Select--</option>
+                <option value="Home University">Home University</option>
+                <option value="Other than Home University">Other than Home University</option>
+            </select>
+        </div>
+    
+        <div class="col-md-6">
+            <label for="minority-status" class="form-label">Minority Status</label>
+            <select name="minority-status" id="minority-status" class="form-select" required>
+                <option value="">--Select--</option>
+                <option value="Minority">Minority</option>
+                <option value="Non Minority">Non Minority</option>
+            </select>
+        </div>
+    
+        <div class="col-12 d-flex justify-content-between">
+            <input type="reset" value="Reset" class="btn btn-secondary">
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </div>
+    </form>
+    
+    </div>
+    <footer class="mt-5">
+        <div class="container-fluid bg-dark h-100 text-white p-3 d-flex">
+            <div>
+                <p class="text-center">© 2024 Arya College Institute of Technology</p>
+                <p class="text-center">Accredited with 'A' Grade (2021) by NAAC for 5 years
+                    Ranked in band 251-300 (2020) by NIRF
+                    UG Programs for Computer, IT, AIDS & ECS <br>Accredited by <br>NBA
+                    & <br>
+                    University of Mumbai</p>
+            </div>
+            <div class="ms-3">
+                <img src="/Images/college-logo.jpg" alt="logo" height="90px" width="90px" class="m-2 rounded">
+            </div>
+        </div>
+    </footer>
+    <script src="form.js"></script>
+</body>
+</html>
